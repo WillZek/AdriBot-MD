@@ -64,9 +64,9 @@ global.waittt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻�
 global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼...*';
 
 //Enlaces
-var canal =   'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
+var canal =   'https://whatsapp.com/channel/0029Vb1uR5LJ3jutXxfu8T2w'
 var grupo = 'https://chat.whatsapp.com/HwcDg23QEwhIXc73wL0tKj'  
-var github = 'https://github.com/WillZek/CrowBot-ST' 
+var github = 'https://github.com/WillZek' 
 var facebook = 'https://www.facebook.com/profile.php?id=100055985748040' 
 let instagram = 'https://www.instagram.com/crowbot_wa'
 
