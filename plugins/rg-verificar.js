@@ -41,7 +41,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     
     let sn = createHash('md5').update(m.sender).digest('hex')
     let regbot = `┏━━━━━━━━━━━━━━━━━━⬣
-┃⋄ *🎩 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 - 𝐂𝐑𝐎𝐖𝐁𝐎𝐓*
+┃⋄ *🎩 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 - 𝐀𝐃𝐑𝐈𝐁𝐎𝐓*
 ┗━━━━━━━━━━━━━━━━━━⬣\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
     regbot += `「💛」𝐍𝐨𝐦𝐛𝐫𝐞: ${name}\n`
@@ -62,7 +62,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
             externalAdReply: {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
                 body: dev,
-                thumbnailUrl: 'https://files.catbox.moe/lger9i.jpg',
+                thumbnailUrl: 'https://files.catbox.moe/0gel94.jpg',
                 sourceUrl: 'https://whatsapp.com/channel/0029Vb1kImN42Dcn99y1rW0E',
                 mediaType: 1,
                 showAdAttribution: true,
