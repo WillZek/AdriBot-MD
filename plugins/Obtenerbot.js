@@ -17,5 +17,5 @@ Q haga  que 10 amigos o conocidos sigan el canal, una vez que lo hagan le dices 
 
 *Link de canal que deben seguir* 👇
 
-https://whatsapp.com/channel/0029VagYdbFEwEk5htUejk0t
+https://whatsapp.com/channel/0029Vb1uR5LJ3jutXxfu8T2w
 `;
