@@ -71,7 +71,7 @@ global.mashac = 'wa.me/59597657755*/n• *wa.me/5224312686*/n• *wa.me/50557865
 global.repobot = 'https://github.com/WillZek/CrowBot-ST'
 global.grupo = 'https://chat.whatsapp.com/B7POPrlJiZf7UWHJKvzVkx'
 global.comu = 'https://chat.whatsapp.com/Bgfb6Ag13BDCvwzOtldlCm'
-global.channel = 'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
+global.channel = 'https://whatsapp.com/channel/0029Vb1uR5LJ3jutXxfu8T2w'
 global.insta = 'https://www.instagram.com/crowbot-wa'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
