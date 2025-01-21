@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'crow': '👑「 *`MENUS CROWBOT`* 」👑',
+  'crow': '👑「 *`MENUS ADRIBOT`* 」👑',
   'main': '「INFO」🍨',
   'teclado': '「TECLADO CROWBOT」🍨',
   'buscador': '「BUSQUEDAS」🍨',
@@ -25,7 +25,7 @@ let tags = {
   'logos': '「EDICION LOGOS」🍨', 
 }
 
-const vid = ['https://files.catbox.moe/a0vum9.mp4', 'https://files.catbox.moe/a0vum9.mp4', 'https://files.catbox.moe/a0vum9.mp4']
+const vid = ['https://files.catbox.moe/szsys9.mp4', 'https://files.catbox.moe/szsys9.mp4', 'https://files.catbox.moe/szsys9.mp4']
 
 const defaultMenu = {
   before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
