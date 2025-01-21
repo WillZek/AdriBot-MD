@@ -119,7 +119,6 @@ global.icono = [
 'https://files.catbox.moe/0gel94.jpg',
 'https://files.catbox.moe/zuo7nw.jpg',
 'https://files.catbox.moe/hcv0s6.jpg',
-'https://files.catbox.moe/sk7gv5.jpg',
 ].getRandom()
 
 global.urls = [
