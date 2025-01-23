@@ -6,7 +6,8 @@ let handler = async(m, { conn, usedPrefix, command }) => {
     let mentions = participants.map(p => p.id).join(' ');
 
     m.react('😎');
-    await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', { mentions: participants.map(p => p.id), m, null);
+    await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', { mentions: participants.map(p => p.id) }, m, null);
+};
 
 handler.command = ['fachero'];
 
