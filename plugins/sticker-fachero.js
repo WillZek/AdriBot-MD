@@ -11,6 +11,6 @@ let handler = async(m, { conn, usedPrefix, command }) => {
     await conn.sendMessage(m.chat, { text: `Mod Fachero 😎`, mentions: participants.map(p => p.id) });
 };
 
-handler.command = ['fachero'];
+handler.customPrefix = /^(fachero)/
 
 export default handler;
