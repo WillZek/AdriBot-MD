@@ -6,4 +6,6 @@ m.react('😎')
     await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', { mentions: users }, m, null);
 };
 
+handler.command = ['fachero'];
+
 export default handler;
