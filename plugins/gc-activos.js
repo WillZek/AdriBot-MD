@@ -7,17 +7,20 @@ let handler = async (m, { conn, text, participants }) => {
     }
     var total = 0;
     var activos = [];
-    
+
     for(let i = 0; i < sum; i++) {
         let users = m.isGroup ? participants.find(u => u.id == member[i]) : {};
-        if (typeof global.db.data.users[member[i]] !== 'undefined' && global.db.data.users[member[i]].chat > 0 && !users.isAdmin && !users.isSuperAdmin) {
-            if (global.db.data.users[member[i]].whitelist == true) {
-                total++;
-                activos.push(member[i]);
+        if (typeof global.db.data.users[member[i]] !== 'undefined') {
+            // Verificamos que el usuario no sea admin y que tenga chat activo
+            if (global.db.data.users[member[i]].chat > 0 && !users.isAdmin && !users.isSuperAdmin) {
+                if (global.db.data.users[member[i]].whitelist == true) {
+                    total++;
+                    activos.push(member[i]);
+                }
             }
         }
     }
-    
+
     if(total == 0) return conn.reply(m.chat, `*[⚔️] En Este Grupo No Hay Miembros Activos✨🍷*`, m, rcanal);
 
     const stickerUrl = 'https://files.catbox.moe/agx2sc.webp'; 
