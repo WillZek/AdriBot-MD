@@ -12,12 +12,13 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply(m.chat, '🍭 Ingresa Un Nombre De Repositorio o De Usuario De Github', m, rcanal);
 
 try {
-let api = 'https://dark-core-api.vercel.app/api/search/github?key=api&q=${text}';
+let api = `https://dark-core-api.vercel.app/api/search/github?key=api&q=${text}`;
 
 let response = await fetch(api);
 let json = await response.json();
+let result = json.results[0];
 
-let txt = `Nombre: ${json.results[0].name}\nDescripcion: ${json.results[0].description}\nCreado: ${json.results[0].createdAt}`;
+let txt = `Nombre: ${result.name}\nDescripcion: ${result.description}\nCreado: ${result.createdAt}`;
 
 let img = 'https://cloud.dorratz.com/files/669d45d70d27913f08db78953c11903b';
 
