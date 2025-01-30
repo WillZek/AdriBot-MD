@@ -17,7 +17,7 @@ let api = 'https://dark-core-api.vercel.app/api/search/github?key=api&q=${text}'
 let responde = await fetch(api);
 let json = await response.json();
 
-let txt = `Nombre: ${json.name ? json.name : 'No Encontrado'}\nDescripcion: ${json.description ? json.description : 'No Encontrada}\nCreado: ${json.createdAt ? json.description : 'No disponible'}`;
+let txt = `Nombre: ${json.name}\nDescripcion: ${json.description}\nCreado: ${json.createdAt}`;
 
 let img = 'https://cloud.dorratz.com/files/669d45d70d27913f08db78953c11903b';
 
@@ -25,7 +25,7 @@ conn.sendMessage(m.chat, { image: { url: img, caption: txt }, { quoted: fkontak 
 
 } catch (error) {
 console.error(error)
-m.reply(`*Error:* ${error.message}`);
+m.reply(`Error: ${error.message}`);
 m.react('✖️');
  }
 };
