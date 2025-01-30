@@ -17,7 +17,7 @@ let api = 'https://dark-core-api.vercel.app/api/search/github?key=api&q=${text}'
 let response = await fetch(api);
 let json = await response.json();
 
-let txt = `Nombre: ${json.name}\nDescripcion: ${json.description}\nCreado: ${json.createdAt}`;
+let txt = `Nombre: ${json.results.name}\nDescripcion: ${json.results.description}\nCreado: ${json.createdAt}`;
 
 let img = 'https://cloud.dorratz.com/files/669d45d70d27913f08db78953c11903b';
 
