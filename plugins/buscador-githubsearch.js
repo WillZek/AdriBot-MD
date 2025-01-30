@@ -18,7 +18,7 @@ let response = await fetch(api);
 let json = await response.json();
 let result = json.results[0];
 
-let txt = `Nombre: ${result.name}\nDescripcion: ${result.description}\nCreado: ${result.createdAt}`;
+let txt = `*Nombre:* ${result.name}\n*Owner:* ${result.creator}\n*Descripcion:* ${result.description}\n*Creado:* ${result.createdAt}`;
 
 let img = 'https://cloud.dorratz.com/files/669d45d70d27913f08db78953c11903b';
 
