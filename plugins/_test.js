@@ -1,34 +1,27 @@
-/* Happy Mod Search By WillZek 
-- Free Codes Titan 
-- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S 
-*/
-
-// 👽 𝗛𝗔𝗣𝗣𝗬𝗠𝗢𝗗 - 𝗦𝗘𝗔𝗥𝗖𝗛
+// Twitterdl by WillZek 
 
 import fetch from 'node-fetch';
 
-let handler = async(m, { conn, text, usedPrefix, command }) => {
+let handler = async(m, { conn, args, usedPrefix, command }) => {
 
-if (!text) return m.reply(`📩 Ingresa Un Texto Para Buscar En Happy Mod\n> Ejemplo: ${usedPrefix + command} Minecraft`);
+if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Twitter Para Poder Mandar Su Video');
 
 try {
-let api = `https://dark-core-api.vercel.app/api/search/happymod?key=api&text=${text}`;
-
+let api = `https://api.dorratz.com/xdown?url=${args[0]}`;
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.results[0];
+let arch = json.media;
 
-if (!arch || arch.length === 0) {
-    return m.reply(`🍭 No Encontramos Resultados Para : ${text}`);
-}
+if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
 
 m.react('🕑');
-let txt = `🍭 *Titulo:* ${arch.name}\n✏️ *Descripción:* ${arch.description}\n🌟 *Estrellas:* ${arch.stars}\n📎 *Link:* ${arch.link}`;
+m.reply(m.chat, '✨ *Espere Un Momento Estamos Enviando Su Video*\n> El Tiempo Puede Variar Depende El Peso Del Vídeo', m, rcanal);
 
-let img = arch.image;
+let txt = `> *¡Video Descargado Con Éxito!*\n*Likes:* ${arch.likes}`;
+let link = arch.url;
 
-conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
-m.react('✅');
+await conn.sendMessage(m.chat, { video: { url: link }, caption: txt }, {quoted: fkontak});   
+m.reply('✅');
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
@@ -36,6 +29,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['happymodsearch', 'hpmodseaech', 'hpmsearch'];
+handler.command = ['medtest'];
 
 export default handler;
