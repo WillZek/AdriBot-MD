@@ -20,7 +20,7 @@ let txt = `> *Resultado De: ${text}*`;
 let img = res;
 let link = img;
 
-await conn.sendMessage(m.chat, { image: { url: link }, caption: txt }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { image: { url: res }, caption: txt }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
