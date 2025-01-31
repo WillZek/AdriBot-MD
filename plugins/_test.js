@@ -10,7 +10,7 @@ try {
 let api = `https://api.dorratz.com/xdown?url=${args[0]}`;
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.media;
+let arch = json.media[0];
 
 if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
 
