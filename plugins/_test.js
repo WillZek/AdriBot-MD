@@ -11,9 +11,9 @@ if (!text) return m.reply('🍭 Ingrese Un Texto Para Buscar Una Imagen En Googl
 
 try {
 let api = `https://api.dorratz.com/googleimagen?text=${text}`;
-let response = await fetch(api);
+/* let response = await fetch(api);
 let json = await response.json();
-let arch = json.media[0];
+let arch = json.media[0]; */
 
 /* if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal) */
 
@@ -21,7 +21,7 @@ m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
 let link = api.jgp;
 
-await conn.sendMessage(m.chat, { img: { url: link }, caption: txt }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { image: { url: link }, caption: txt }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
