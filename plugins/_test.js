@@ -19,9 +19,9 @@ if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para 
 
 m.react('🕑');
 let txt = `> *¡Video descargado con exito!*`;
-let link = arch.url;
+let link = api.jgp;
 
-await conn.sendMessage(m.chat, { video: { url: link }, caption: txt }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { img: { url: link }, caption: txt }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
@@ -30,6 +30,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['xdl', 'twitterdl'];
+handler.command = ['test', 'gimaget'];
 
 export default handler;
