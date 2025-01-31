@@ -13,7 +13,7 @@ try {
 let api = `https://api.dorratz.com/v2/wallpaper-s?q=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let res = json.result[0];
+let res = json.result[0].getRandom();
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
