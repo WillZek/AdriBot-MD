@@ -1,4 +1,4 @@
-/* Wallpaper Search By WillZek 
+/* Wallpaper By WillZek 
 - Free Codes Titan 
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 */
