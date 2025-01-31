@@ -5,12 +5,12 @@
 
 import fetch from 'node-fetch';
 
-let handler = async(m, { conn, args, usedPrefix, command }) => {
+let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Twitter Para Poder Mandar Su Video');
+if (!text) return m.reply('🍭 Ingrese Un Texto Para Buscar Una Imagen En Google');
 
 try {
-let api = `https://api.dorratz.com/xdown?url=${args[0]}`;
+let api = `https://api.dorratz.com/googleimagen?text=${text}`;
 let response = await fetch(api);
 let json = await response.json();
 let arch = json.media[0];
