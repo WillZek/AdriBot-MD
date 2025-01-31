@@ -13,7 +13,7 @@ try {
 let api = `https://dark-core-api.vercel.app/api/search/happymod?key=api&text=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.result;
+let arch = json.results;
 
 m.react('🕑');
 let txt = `🍭 *Titulo:* ${arch.name}\n🌟 *Estrellas:* ${arch.stars}\n📎 *Link:* ${arch.link}`;
