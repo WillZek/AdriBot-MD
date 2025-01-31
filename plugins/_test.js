@@ -7,17 +7,17 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply('🍭 Ingrese Un Texto Para Buscar Una Imagen');
+if (!text) return m.reply('🎩 Ingrese Un Texto Para Buscar Un Wallpaper');
 
 try {
-let api = `https://api.dorratz.com/v3/ai-image?prompt=${text}`;
+let api = `https://api.dorratz.com/v2/wallpaper-s?q=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let res = json.data;
+let res = json.result;
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
-let img = res.image_link;
+let img = res;
 let link = img;
 
 await conn.sendMessage(m.chat, { image: { url: link }, caption: txt }, {quoted: fkontak});   
