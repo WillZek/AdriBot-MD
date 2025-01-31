@@ -7,15 +7,13 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply('🍭 Ingrese Un Texto Para Buscar Una Imagen En Google');
+if (!text) return m.reply('🍭 Ingrese Un Texto Para Buscar Una Imagen');
 
 try {
 let api = `https://api.dorratz.com/v3/ai-image?prompt=${text}`;
 let response = await fetch(api);
 let json = await response.json();
 let arch = json.data;
-
-/* if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal) */
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
@@ -31,6 +29,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['test', 'gimaget'];
+handler.command = ['imagen', 'image'];
 
 export default handler;
