@@ -19,8 +19,8 @@ let arch = json.data[0];
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
-let img = image_link;
-let link = arch.img;
+let img = arch.image_link;
+let link = img;
 
 await conn.sendMessage(m.chat, { image: { url: link }, caption: txt }, {quoted: fkontak});   
 m.react('✅');
