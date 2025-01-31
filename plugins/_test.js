@@ -15,7 +15,7 @@ let arch = json.media[0];
 if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
 
 m.react('🕑');
-let txt = `> *¡Video Descargado Con Éxito!*\n*Likes:* ${arch.likes}`;
+let txt = `> *¡Video Descargado Con Éxito!`;
 let link = arch.url;
 
 await conn.sendMessage(m.chat, { video: { url: link }, caption: txt }, {quoted: fkontak});   
