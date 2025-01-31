@@ -18,7 +18,7 @@ let arch = json.media[0];
 if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
 
 m.react('🕑');
-let txt = `> *¡Video descargado con exito!*`;
+let txt = `> *Resultado De: ${text}*`;
 let link = api.jgp;
 
 await conn.sendMessage(m.chat, { img: { url: link }, caption: txt }, {quoted: fkontak});   
