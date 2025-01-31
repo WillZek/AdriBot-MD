@@ -36,6 +36,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['medtest'];
+handler.command = ['happymodsearch', 'hpmodseaech', 'hpmsearch'];
 
 export default handler;
