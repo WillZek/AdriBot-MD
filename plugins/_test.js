@@ -21,7 +21,7 @@ let txt = `> *¡Video Descargado Con Éxito!*\n*Likes:* ${arch.likes}`;
 let link = arch.url;
 
 await conn.sendMessage(m.chat, { video: { url: link }, caption: txt }, {quoted: fkontak});   
-m.reply('✅');
+m.react('✅');
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
