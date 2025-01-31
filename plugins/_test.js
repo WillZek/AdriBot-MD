@@ -15,16 +15,14 @@ let response = await fetch(api);
 let json = await response.json();
 let arch = json.result;
 
-if (!args[0].match(/mediafire/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
-
 m.react('🕑');
-m.reply('✨ Espere Un Momento Estamos Enviando Su Pedido\n> El Tiempo Puede Variar Depende el peso del archivo');
+let txt = `*Titulo:*
 
 let name = arch.name;
 let url = arch.link;
 let tipo = arch.mime;
 
-await conn.sendFile(m.chat, url, name, null, m, null, { mimetype: tipo, asDocument: true })
+await conn.sendMessage(m.chat, url, name, null, m, null, { mimetype: tipo, asDocument: true })
 m.react('✅');
 
 } catch (e) {
