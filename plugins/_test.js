@@ -27,6 +27,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['imagen', 'image'];
+handler.command = ['wallpaper', 'wallp'];
 
 export default handler;
