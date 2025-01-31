@@ -7,10 +7,10 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, usedPrefix, command }) => {
 
-if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Mediafire\nEjemplo:');
+if (!text) return m.reply('⬇️ Ingresa Un Link De Mediafire\nEjemplo:');
 
 try {
-let api = `https://dark-core-api.vercel.app/api/download/mediafire?key=api&url=${args[0]}`;
+let api = `https://dark-core-api.vercel.app/api/download/mediafire?key=api&url=${text}`;
 let response = await fetch(api);
 let json = await response.json();
 let arch = json.result;
