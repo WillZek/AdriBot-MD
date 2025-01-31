@@ -1,9 +1,9 @@
 /* Happy Mod Search By WillZek 
 - Free Codes Titan 
-- https://github.com/WillZek 
+- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S 
 */
 
-// 🎩 *HAPPYMOD - SEARCH*
+// 🎩 𝗛𝗔𝗣𝗣𝗬𝗠𝗢𝗗 - 𝗦𝗘𝗔𝗥𝗖𝗛
 
 import fetch from 'node-fetch';
 
