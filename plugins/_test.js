@@ -7,7 +7,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
-if (!text) return m.reply('⬇️ Ingresa Un Link De Mediafire\nEjemplo:');
+if (!text) return m.reply('⬇️ Ingresa Un Texto Para Buscar En Happy Mod\n> Ejemplo: ${usedPrefix + command} Minecraft');
 
 try {
 let api = `https://dark-core-api.vercel.app/api/download/mediafire?key=api&url=${text}`;
