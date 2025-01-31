@@ -15,7 +15,7 @@ let response = await fetch(api);
 let json = await response.json();
 let arch = json.media[0];
 
-if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
+/* if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal) */
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
