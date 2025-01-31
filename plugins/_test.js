@@ -27,6 +27,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['medtest'];
+handler.command = ['xdl', 'twitterdl'];
 
 export default handler;
