@@ -16,9 +16,9 @@ let json = await response.json();
 let res = json.result[0];
 
 m.react('🕑');
-let txt = `> *¡Aquí Tines Tu Wallpaper!*`;
+let wal = `> *¡Aquí Tines Tu Wallpaper!*`;
 
-await conn.sendMessage(m.chat, { image: { url: res }, caption: txt }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { image: { url: res }, caption: wal }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
