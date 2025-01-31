@@ -24,7 +24,7 @@ let name = arch.name;
 let url = arch.link;
 let tipo = arch.mime;
 
-await conn.sendFile(m.chat, url, name, { caption: '🎩 Aqui Tienes!' }, null, m, null, { mimetype: tipo, asDocument: true })
+await conn.sendFile(m.chat, url, name, null, m, null, { mimetype: tipo, asDocument: true })
 m.react('✅');
 
 } catch (e) {
