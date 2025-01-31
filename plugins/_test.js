@@ -18,7 +18,7 @@ let arch = json.data;
 if (!args[0].match(/mediafire/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
 
 m.react('🕑');
-m.reply('✨ Espere Un Momento Estamos Enviando Su Pedido\n> El Tiempo Puede Variar Depende el peso del archivo', m, rcanal);
+m.reply('✨ Espere Un Momento Estamos Enviando Su Pedido\n> El Tiempo Puede Variar Depende el peso del archivo');
 
 let filename = arch.filename;
 let url = arch.link;
