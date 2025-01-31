@@ -1,4 +1,4 @@
-// Mediafire By WillZek 
+/* Mediafire By WillZek 
 - Free Codes Titan 
 - https://github.com/WillZek 
 */
