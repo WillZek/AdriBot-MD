@@ -21,7 +21,7 @@ m.react('🕑');
 m.reply('✨ Espere Un Momento Estamos Enviando Su Pedido\n> El Tiempo Puede Variar Depende el peso del archivo');
 
 let name = arch.name;
-let url = arch.link;
+let url = arch.url;
 let tipo = arch.mime;
 
 await conn.sendFile(m.chat, url, name, null, m, null, { mimetype: tipo, asDocument: true })
