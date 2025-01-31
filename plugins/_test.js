@@ -20,11 +20,11 @@ if (!args[0].match(/mediafire/gi)) return m.reply(m.chat, '✖️ Verifica El Li
 m.react('🕑');
 m.reply('✨ Espere Un Momento Estamos Enviando Su Pedido\n> El Tiempo Puede Variar Depende el peso del archivo');
 
-let filename = arch.filename;
+let name = arch.filename;
 let url = arch.link;
 let tipo = arch.mime;
 
-await conn.sendFile(m.chat, url, filename, null, m, null, { mimetype: tipo, asDocument: true })
+await conn.sendFile(m.chat, url, name, null, m, null, { mimetype: tipo, asDocument: true })
 m.react('✅');
 
 } catch (e) {
