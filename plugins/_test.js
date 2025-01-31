@@ -13,11 +13,11 @@ try {
 let api = `https://api.dorratz.com/v3/ai-image?prompt=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.data;
+let res = json.data;
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
-let img = arch.image_link;
+let img = res.image_link;
 let link = img;
 
 await conn.sendMessage(m.chat, { image: { url: link }, caption: txt }, {quoted: fkontak});   
