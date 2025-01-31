@@ -15,8 +15,6 @@ let arch = json.media[0];
 if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
 
 m.react('🕑');
-m.reply(m.chat, '✨ *Espere Un Momento Estamos Enviando Su Video*\n> El Tiempo Puede Variar Depende El Peso Del Vídeo', m, rcanal);
-
 let txt = `> *¡Video Descargado Con Éxito!*\n*Likes:* ${arch.likes}`;
 let link = arch.url;
 
