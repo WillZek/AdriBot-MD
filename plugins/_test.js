@@ -16,7 +16,7 @@ let json = await response.json();
 let res = json.result[0];
 
 m.react('🕑');
-let text = `> *Resultado De: ${text}*`;
+let text = `> *¡Aquí Tines Tu Wallpaper!*`;
 
 await conn.sendMessage(m.chat, { image: { url: res }, caption: text }, {quoted: fkontak});   
 m.react('✅');
