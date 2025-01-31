@@ -1,4 +1,4 @@
-/* Imagen Search By WillZek 
+/* Wallpaper Search By WillZek 
 - Free Codes Titan 
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 */
@@ -13,14 +13,12 @@ try {
 let api = `https://api.dorratz.com/v2/wallpaper-s?q=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let res = json.result[0].getRandom();
+let res = json.result[0];
 
 m.react('🕑');
-let txt = `> *Resultado De: ${text}*`;
-let img = res;
-let link = img;
+let text = `> *Resultado De: ${text}*`;
 
-await conn.sendMessage(m.chat, { image: { url: res }, caption: txt }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { image: { url: res }, caption: text }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
