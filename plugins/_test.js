@@ -13,7 +13,7 @@ try {
 let api = `https://api.dorratz.com/v3/ai-image?prompt=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.data[0];
+let arch = json.data;
 
 /* if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal) */
 
