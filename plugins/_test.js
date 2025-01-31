@@ -10,10 +10,10 @@ let handler = async(m, { conn, args, usedPrefix, command }) => {
 if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Mediafire\nEjemplo:');
 
 try {
-let api = `https://delirius-apiofc.vercel.app/download/mediafire?url=${args[0]}`;
+let api = `https://dark-core-api.vercel.app/api/download/mediafire?key=api&url=${args[0]}`;
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.data;
+let arch = json.result;
 
 if (!args[0].match(/mediafire/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
 
