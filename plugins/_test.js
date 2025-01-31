@@ -20,7 +20,7 @@ let txt = `🍭 *Titulo:* ${arch.name}\n✏️ *Descripción:* ${arch.descriptio
 
 let img = arch.image;
 
-conn.sendMessage(m.chat, { image: { url: img, caption: txt }, { quoted: fkontak });
+conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
 m.react('✅');
 
 } catch (e) {
