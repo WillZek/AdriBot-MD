@@ -16,7 +16,7 @@ let json = await response.json();
 let arch = json.result;
 
 m.react('🕑');
-let txt = `*Titulo:* ${arch.name}\n*Estrellas:* ${arch.stars}\n*Link:* ${arch.link}`;
+let txt = `🍭 *Titulo:* ${arch.name}\n🌟 *Estrellas:* ${arch.stars}\n📎 *Link:* ${arch.link}`;
 
 let img = arch.image;
 
