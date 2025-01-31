@@ -10,7 +10,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply('🍭 Ingrese Un Texto Para Buscar Una Imagen En Google');
 
 try {
-let api = `https://api.dorratz.com/googleimagen?text=${text}`;
+let api = `https://api.dorratz.com/v3/ai-image?prompt=${text}`;
 let response = await fetch(api);
 let json = await response.json();
 let arch = json.result[0];
