@@ -25,7 +25,7 @@ let url = arch.link;
 let tipo = arch.mime;
 
 await conn.sendFile(m.chat, url, filename, null, m, null, { mimetype: tipo, asDocument: true })
-m.reply('✅');
+m.react('✅');
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
