@@ -5,7 +5,7 @@
 
 import fetch from 'node-fetch';
 
-let handler = async(m, { conn, args, usedPrefix, command }) => {
+let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 
 if (!text) return m.reply('⬇️ Ingresa Un Link De Mediafire\nEjemplo:');
 
