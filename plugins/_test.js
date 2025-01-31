@@ -16,13 +16,11 @@ let json = await response.json();
 let arch = json.result;
 
 m.react('🕑');
-let txt = `*Titulo:*
+let txt = `*Titulo:* ${arch.name}\n*Estrellas:* ${arch.stars}\n*Link:* ${arch.link}
 
-let name = arch.name;
-let url = arch.link;
-let tipo = arch.mime;
+let img = arch.image;
 
-await conn.sendMessage(m.chat, url, name, null, m, null, { mimetype: tipo, asDocument: true })
+conn.sendMessage(m.chat, { image: { url: img, caption: txt }, { quoted: fkontak });
 m.react('✅');
 
 } catch (e) {
