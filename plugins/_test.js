@@ -13,13 +13,13 @@ try {
 let api = `https://api.dorratz.com/googleimagen?text=${text}`;
 /* let response = await fetch(api);
 let json = await response.json();
-let arch = json.media[0]; */
+let arch = json.result[0]; */
 
 /* if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal) */
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
-let link = api.jgp;
+let link = arch.jgp;
 
 await conn.sendMessage(m.chat, { image: { url: link }, caption: txt }, {quoted: fkontak});   
 m.react('✅');
