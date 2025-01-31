@@ -13,9 +13,10 @@ if (!text) return m.reply(`📩 Ingresa Un Texto Para Buscar En Happy Mod\n> Eje
 
 try {
 let api = `https://dark-core-api.vercel.app/api/search/happymod?key=api&text=${text}`;
+
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.results;
+let arch = json.results[0];
 
 if (!arch || arch.length === 0) {
     return m.reply(`🍭 No Encontramos Resultados Para : ${text}`);
