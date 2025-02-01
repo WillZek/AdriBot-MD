@@ -17,7 +17,7 @@ let response = await fetch(api);
 let json = response.json;
 let meta = json.meta; // o json.meta[0]
 
-let txt = `*Titulo:* ${meta.title}\n*Descripción:* ${meta.description}`;
+let txt = `*Titulo:* ${meta.title}\n*Likes:* ${meta.like}\n*Comentarios:* ${meta.comment}\n*Compartidas:* ${meta.share}\n*Link:* ${meta.url}`;
 
 let img = 'despues.jpg';
 let vid = json.hd;
