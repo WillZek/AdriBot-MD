@@ -16,7 +16,8 @@ let json = await response.json();
 let res = json.results[0];
 
 m.react('🕑');
-let ttt = `> Vídeo Descargado Con Exito`;
+let ttt = `*Autor:* ${res.author}\n*Título:* ${res.title}`;
+
 let aud = res.audio;
 let img = res.thumbnail;
 
