@@ -17,7 +17,7 @@ let json = await resp.json();
 let data = json.html;
 
 let xd = 'https://files.catbox.moe/v8q8y2.jpg';
-let html = `*HTML EXTRAIDO DE LA WEB: ${data}*`
+let html = `*HTML EXTRAIDO DE LA WEB:* ${data}*`
 
 conn.sendMessage(m.chat, { image: { url: xd }, caption: html }, { quoted: fkontak });
 };
