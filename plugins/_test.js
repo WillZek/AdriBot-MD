@@ -9,23 +9,17 @@ import { sticker } from '../lib/sticker.js';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply('🍭 Ingresa Un Link De Stickerly');
+if (!text) return m.reply('🍭 Ingresa Un Texto Para Buscar Su Sticker');
 m.react('🕑');
 
-let api = `https://delirius-apiofc.vercel.app/download/stickerly?url=${text}`;
+let api = `https://api.diioffc.web.id/api/search/stickersearch?query=${text}`;
 let resp = await fetch(api);
 let json = await resp.json();
 let data = json.data[0];
 
-let buffer = Buffer.from(data.stickers, 'base64');
-let stiker = await sticker(buffer, false, global.packname, global.author);
-
 let img = data.stickers;
 
 m.react('✅');
-/* conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
-*/
-
 await conn.sendFile(m.chat, img, 'sticker.webp', '', m, null);
 }
 
