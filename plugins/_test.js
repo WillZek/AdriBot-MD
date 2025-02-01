@@ -23,6 +23,6 @@ m.react('✅');
 conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }
 
-handler.command = ['scweb'];
+handler.command = ['test'];
 
 export default handler;
