@@ -33,6 +33,6 @@ m.react('✖️');
  }
 };
 
-handler.command = ['test'];
+handler.command = ['tiktoksearch', 'ttsearch'];
 
 export default handler;
