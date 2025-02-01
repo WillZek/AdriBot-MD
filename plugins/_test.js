@@ -22,8 +22,7 @@ let sUrl = 'https://s3.getstickerpack.com/storage/uploads/sticker-pack/croe-2020
 
 m.react('✅');
 await conn.sendFile(m.chat, sUrl, 'sticker.webp', '', m, null);
- }
-};
+}
 
 handler.command = ['test'];
 
