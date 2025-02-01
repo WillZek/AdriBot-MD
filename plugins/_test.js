@@ -3,6 +3,8 @@
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 */
 
+// [💥] 𝗧𝗜𝗞𝗧𝗢𝗞 𝗠𝗣3 - 𝗗𝗟
+
 import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, usedPrefix, command }) => {
@@ -32,6 +34,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['test'];
+handler.command = ['tiktokmp3', 'ttmp3'];
 
 export default handler;
