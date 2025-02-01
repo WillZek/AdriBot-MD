@@ -7,13 +7,13 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, usedPrefix, command }) => {
 
-if (!args[0]) return m.reply('🎩 Ingrese Una Url De Tiktok\n*Ejemplo:* ${usedPrefix + command} https://vm.tiktok.com/ZMh3KL31o/');
+if (!args[0]) return m.reply(`🎩 Ingrese Una Url De Tiktok\n*Ejemplo:* ${usedPrefix + command} https://vm.tiktok.com/ZMh3KL31o/`);
 
 try {
 let api = `https://eliasar-yt-api.vercel.app/api/search/tiktok?query=${args[0]}`;
 let response = await fetch(api);
 let json = await response.json();
-let res = json.results[0];
+let res = json.results;
 
 m.react('🕑');
 let ttt = `*Autor:* ${res.author}\n*Título:* ${res.title}`;
