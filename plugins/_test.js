@@ -13,8 +13,8 @@ if (!args[0]) return m.reply('🍭 Ingresa Un Link De Alguna Web');
 m.react('🕑');
 
 let api = `https://delirius-apiofc.vercel.app/tools/htmlextract?url=${args[0]}`;
-let resp = await fetch(api);
-let json = await resp.json();
+let FCT = await fetch(api);
+let json = await FCT.json();
 let data = json.html;
 
 let xd = 'https://files.catbox.moe/trd8vu.jpg';
