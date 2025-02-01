@@ -16,10 +16,11 @@ let resp = await fetch(api);
 let json = await resp.json();
 let data = json.data;
 
-let stick = data.stickers;
+const buffer = Buffer.from(data.stickers, 'base64');
+let stiker = await sticker(buffer, false, global.packname, global.author);
 
 m.react('✅');
-conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
+conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }
 
 handler.command = ['scweb'];
