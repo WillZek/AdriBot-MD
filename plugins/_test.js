@@ -20,6 +20,8 @@ let data = json.data[0];
 let buffer = Buffer.from(data.stickers, 'base64');
 let stiker = await sticker(buffer, false, global.packname, global.author);
 
+let img = data.stickers;
+
 m.react('✅');
 /* conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 */
