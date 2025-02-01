@@ -14,7 +14,7 @@ try {
 let api = `https://delirius-apiofc.vercel.app/search/tiktoksearch?query=${text}`;
 
 let response = await fetch(api);
-let json = response.json;
+let json = response.json();
 let meta = json.meta[0];
 
 let txt = `*Nombre De Usuario:* ${meta.username}\n*Titulo:* ${meta.title}\n*Likes:* ${meta.like}\n*Comentarios:* ${meta.comment}\n*Compartidas:* ${meta.share}\n*Link:* ${meta.url}`;
