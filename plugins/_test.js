@@ -13,12 +13,12 @@ try {
 let api = `https://eliasar-yt-api.vercel.app/api/search/tiktok?query=${args[0]}`;
 let response = await fetch(api);
 let json = await response.json();
-let res = json.result[0];
+let res = json.results[0];
 
 m.react('🕑');
-let wal = `> Vídeo Descargado Con Exito`;
+let ttt = `> Vídeo Descargado Con Exito`;
 
-await conn.sendMessage(m.chat, { audio: { url:  }, caption: wal }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { audio: { url:  }, caption: ttt }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
