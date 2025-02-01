@@ -8,7 +8,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply('🍭 Ingresa Un Link De Stickerly`);
+if (!text) return m.reply('🍭 Ingresa Un Link De Stickerly');
 m.react('🕑');
 
 let api = `https://delirius-apiofc.vercel.app/download/stickerly?url=${text}`;
