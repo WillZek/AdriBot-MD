@@ -9,7 +9,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply(m.chat, '🍭 Ingresa Un Nombre De Repositorio o De Usuario De Github', m, rcanal);
+if (!text) return m.reply('🍭 Ingresa Un Nombre De Repositorio o De Usuario De Github');
 
 try {
 let api = `https://dark-core-api.vercel.app/api/search/github?key=api&text=${text}`;
