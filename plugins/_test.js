@@ -17,7 +17,7 @@ let resp = await fetch(api);
 let json = await resp.json();
 let data = json.result[0];
 
-let img = data.stickers;
+let img = data.sticker;
 
 m.react('✅');
 await conn.sendFile(m.chat, img, 'sticker.webp', '', m, null);
