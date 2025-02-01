@@ -14,7 +14,7 @@ m.react('🕑');
 let api = `https://delirius-apiofc.vercel.app/tools/htmlextract?url=${args[0]}`;
 let resp = await fetch(api);
 let json = await resp.json();
-let data = json.html[0];
+let data = json.html;
 
 let xd = 'https://files.catbox.moe/v8q8y2.jpg';
 let html = `*HTML EXTRAIDO DE LA WEB: ${data}*`
