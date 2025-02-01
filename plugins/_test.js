@@ -16,7 +16,7 @@ let resp = await fetch(api);
 let json = await resp.json();
 let data = json.data;
 
-let stick = data.pegatinas;
+let stick = data.stickers;
 
 m.react('✅');
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
