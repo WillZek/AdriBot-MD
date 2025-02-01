@@ -12,6 +12,9 @@ if (!text) return m.reply('🍭 Ingresa Un Link De Stickerly`);
 m.react('🕑');
 
 let api = `https://delirius-apiofc.vercel.app/download/stickerly?url=${text}`;
+let resp = await fetch(api);
+let json = await resp.json();
+let 
 
 let img = 'https://delirius-apiofc.vercel.app/tools/ssweb?url=${text}';
 
