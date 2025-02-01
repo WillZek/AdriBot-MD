@@ -11,7 +11,7 @@ let stiker = await sticker(null,`https://api.erdwpe.com/api/maker/attp?text=${te
 conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: `h`, mediaType: 2, sourceUrl: channel, thumbnail: imagen1}}}, { quoted: m })}
 
 if (command == 'ttp') {
-let stiker = await sticker(null,`https://api.erdwpe.com/api/maker/ttp?text=${teks}`,global.packname, global.author)
+let stiker = await sticker(null,`https://delirius-apiofc.vercel.app/canvas/ttp?text=${teks}`,global.packname, global.author)
 conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: `h`, mediaType: 2, sourceUrl: channel, thumbnail: imagen1}}}, { quoted: m })}
 }
 handler.help = ['attp'];
