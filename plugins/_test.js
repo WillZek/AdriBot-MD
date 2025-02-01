@@ -1,10 +1,8 @@
-/* Tiktok Search By WillZek 
+/* Pack By WillZek 
 - Free Codes Titan
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 - https://github.com/WillZek 
 */
-
-// 【🔎】𝗧𝗜𝗞𝗧𝗢𝗞 𝗦𝗘𝗔𝗥𝗖𝗛
 
 import fetch from 'node-fetch';
 
