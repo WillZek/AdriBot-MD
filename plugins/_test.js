@@ -1,8 +1,9 @@
 /* HTML WEB By WillZek 
 - Free Codes Titan
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
-- https://github.com/WillZek 
 */
+
+// [🕵️] 𝗛𝗧𝗠𝗟 𝗪𝗘𝗕
 
 import fetch from 'node-fetch';
 
