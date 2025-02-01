@@ -30,7 +30,6 @@ await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', m, null);
 */
 
 if (stiker) conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: '🎩𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐒𝐭𝐢𝐜𝐤𝐞𝐫✨', body: `CrowBot - ST ${emojis}`, mediaType: 2, sourceUrl: grupo, thumbnail: icons}}}, { quoted: m })
-
 };
 
 handler.command = ['test'];
