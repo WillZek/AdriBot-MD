@@ -23,6 +23,6 @@ let html = `*🎩 HTML EXTRAIDO DE LA WEB:* ${data}*`
 conn.sendMessage(m.chat, { image: { url: xd }, caption: html }, { quoted: fkontak });
 };
 
-handler.command = ['htmlweb', 'hweb', 'test'];
+handler.command = ['htmlweb', 'hweb'];
 
 export default handler;
