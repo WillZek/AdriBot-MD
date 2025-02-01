@@ -9,7 +9,7 @@ import { sticker } from '../lib/sticker.js';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply('🍭 Ingresa Un Texto Para Buscar Su Sticker');
+/* if (!text) return m.reply('🍭 Ingresa Un Texto Para Buscar Su Sticker');
 m.react('🕑');
 
 let api = `https://api.diioffc.web.id/api/search/stickersearch?query=${text}`;
@@ -18,6 +18,8 @@ let json = await resp.json();
 let data = json.result;
 
 let img = data.sticker[0];
+*/
+
 let sUrl = 'https://s3.getstickerpack.com/storage/uploads/sticker-pack/croe-2020/sticker_1.png?7a91fa5d3be667dcab133716947394c5'; 
 
 m.react('✅');
