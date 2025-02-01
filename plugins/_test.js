@@ -13,7 +13,7 @@ m.react('🕑');
 
 let api = `https://delirius-apiofc.vercel.app/download/stickerly?url=${text}`;
 let resp = await fetch(api);
-let json = await response.json();
+let json = await resp.json();
 let data = json.data[0];
 
 let buffer = Buffer.from(data.stickers, 'base64');
