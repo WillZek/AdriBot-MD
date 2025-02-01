@@ -6,14 +6,14 @@
 
 import fetch from 'node-fetch';
 
-let handler = async(m, { conn, args, usedPrefix, command }) => {
+let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!args[0]) return m.reply('🍭 Ingresa Un Link De Un Sitio Web`);
+if (!text) return m.reply('🍭 Ingresa Un Link De Un Sitio Web`);
 m.react('🕑');
 
-let txt = '*Resultados De:* ${args[0]}';
+let txt = '*Resultados De:* ${text}';
 
-let img = 'https://delirius-apiofc.vercel.app/tools/ssweb?url=${args[0]}';
+let img = 'https://delirius-apiofc.vercel.app/tools/ssweb?url=${text}';
 
 m.react('✅');
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
