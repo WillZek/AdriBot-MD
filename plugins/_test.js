@@ -28,6 +28,6 @@ m.react('✖️');
  }
 }
 
-handler.command = ['wallpaper', 'wallp'];
+handler.command = ['test'];
 
 export default handler;
