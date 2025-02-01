@@ -16,7 +16,7 @@ let resp = await fetch(api);
 let json = await resp.json();
 let data = json.html[0];
 
-let html = `*HTML EXTRAIDO DE LA WEB: ${data}*`
+let html = `*HTML EXTRAIDO DE LA WEB:*`
 
 conn.sendMessage(m.chat, { caption: html }, { quoted: fkontak });
 };
