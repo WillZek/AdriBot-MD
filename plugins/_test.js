@@ -16,12 +16,7 @@ let img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
 
 m.react('✅');
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
-
-} catch (e) {
-m.reply(`Error: ${e.message}`);
-m.react('✖️');
- }
-};
+}
 
 handler.command = ['pack'];
 
