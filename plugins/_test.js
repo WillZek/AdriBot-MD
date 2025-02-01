@@ -20,7 +20,7 @@ let data = json.result;
 let img = data.sticker[0];
 */
 
-let stickerUrl = 'https://s3.getstickerpack.com/storage/uploads/sticker-pack/croe-2020/sticker_1.png?7a91fa5d3be667dcab133716947394c5'; 
+let stickerUrl = 'https://s3.getstickerpack.com/storage/uploads/sticker-pack/croe-2020/sticker_1.png?7a91fa5d3be667dcab133716947394c5.webp'; 
     m.react('😎');
 
 await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', m, null);
