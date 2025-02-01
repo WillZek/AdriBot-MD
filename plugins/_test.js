@@ -1,4 +1,4 @@
-/* Wallpaper By WillZek 
+/* Tiktok MP3 By WillZek 
 - Free Codes Titan 
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 */
@@ -18,6 +18,9 @@ let res = json.results[0];
 m.react('🕑');
 let ttt = `> Vídeo Descargado Con Exito`;
 let aud = res.audio;
+let img = res.thumbnail;
+
+conn.sendMessage(m.chat, { image: { url: img }, caption: ttt }, { quoted: fkontak });
 
 await conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mpeg' }, { quoted: m });
 m.react('✅');
