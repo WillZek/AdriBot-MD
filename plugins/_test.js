@@ -21,7 +21,10 @@ let buffer = Buffer.from(data.stickers, 'base64');
 let stiker = await sticker(buffer, false, global.packname, global.author);
 
 m.react('✅');
-conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
+/* conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
+*/
+
+await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m, null);
 }
 
 handler.command = ['test'];
