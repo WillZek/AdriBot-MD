@@ -21,8 +21,6 @@ let ttt = `*Autor:* ${res.author}\n*Título:* ${res.title}`;
 let aud = res.audio;
 let img = res.thumbnail;
 
-await conn.sendMessage(m.chat, { image: { url: img }, caption: ttt }, { quoted: fkontak });
-
 conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mpeg' }, { quoted: m });
 m.react('✅');
 
