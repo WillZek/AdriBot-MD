@@ -17,8 +17,9 @@ let res = json.results[0];
 
 m.react('🕑');
 let ttt = `> Vídeo Descargado Con Exito`;
+let aud = res.audio;
 
-await conn.sendMessage(m.chat, { audio: { url:  }, caption: ttt }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { audio: { url: aud }, caption: ttt }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
