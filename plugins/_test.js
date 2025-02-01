@@ -14,9 +14,9 @@ m.react('🕑');
 let api = `https://delirius-apiofc.vercel.app/download/stickerly?url=${text}`;
 let resp = await fetch(api);
 let json = await resp.json();
-let 
+let data = json.data;
 
-let img = 'https://delirius-apiofc.vercel.app/tools/ssweb?url=${text}';
+let stick = data.pegatinas;
 
 m.react('✅');
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
