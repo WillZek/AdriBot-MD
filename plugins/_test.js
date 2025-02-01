@@ -17,6 +17,7 @@ let resp = await fetch(api);
 let json = await resp.json();
 let data = json.result;
 
+let stiker = false
 let img = data.sticker;
 
 
