@@ -18,7 +18,7 @@ let json = await response.json();
 let meta = json.meta[0];
 
 m.react('🕑');
-let txt = `*Nombre De Usuario:* ${meta.username}\n*Titulo:* ${meta.title}\n*Likes:* ${meta.like}\n*Comentarios:* ${meta.coment}\n*Compartidas:* ${meta.share}\n*Link:* ${meta.url}`;
+let txt = `✧ *Nombre De Usuario:* ${meta.username}\n✧ *Titulo:* ${meta.title}\n✧ *Likes:* ${meta.like}\n✧ *Comentarios:* ${meta.coment}\n✧ *Compartidas:* ${meta.share}\n✧ *Link:* ${meta.url}`;
 
 let vid = meta.hd;
 
