@@ -5,20 +5,20 @@
 
 import fetch from 'node-fetch';
 
-let handler = async(m, { conn, text, usedPrefix, command }) => {
+let handler = async(m, { conn, args, usedPrefix, command }) => {
 
-if (!text) return m.reply('🎩 Ingrese Un Texto Para Buscar Un Wallpaper');
+if (!args[0]) return m.reply('🎩 Ingrese Una Url De Tiktok\n*Ejemplo:* ${usedPrefix + command} https://vm.tiktok.com/ZMh3KL31o/');
 
 try {
-let api = `https://api.dorratz.com/v2/wallpaper-s?q=${text}`;
+let api = `https://eliasar-yt-api.vercel.app/api/search/tiktok?query=${args[0]}`;
 let response = await fetch(api);
 let json = await response.json();
 let res = json.result[0];
 
 m.react('🕑');
-let wal = `> *¡Aquí Tines Tu Wallpaper!*`;
+let wal = `> Vídeo Descargado Con Exito`;
 
-await conn.sendMessage(m.chat, { image: { url: res }, caption: wal }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { audio: { url:  }, caption: wal }, {quoted: fkontak});   
 m.react('✅');
 
 } catch (e) {
