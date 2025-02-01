@@ -19,7 +19,7 @@ m.react('🕑');
 let ttt = `> Vídeo Descargado Con Exito`;
 let aud = res.audio;
 
-await conn.sendMessage(m.chat, { audio: { url: aud }, caption: ttt }, {quoted: fkontak});   
+await conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mpeg' }, { quoted: m });
 m.react('✅');
 
 } catch (e) {
