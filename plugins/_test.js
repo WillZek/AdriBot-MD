@@ -15,7 +15,7 @@ m.react('🕑');
 let api = `https://api.diioffc.web.id/api/search/stickersearch?query=${text}`;
 let resp = await fetch(api);
 let json = await resp.json();
-let data = json.result;
+let data = json.result[0];
 
 let stiker = false
 let img = data.sticker;
