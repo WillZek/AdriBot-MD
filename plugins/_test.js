@@ -16,7 +16,7 @@ let resp = await fetch(api);
 let json = await resp.json();
 let data = json.data;
 
-const buffer = Buffer.from(data.stickers, 'base64');
+let buffer = Buffer.from(data.stickers, 'base64');
 let stiker = await sticker(buffer, false, global.packname, global.author);
 
 m.react('✅');
