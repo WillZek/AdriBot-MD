@@ -18,10 +18,12 @@ let json = await resp.json();
 let data = json.result;
 
 let img = data.sticker[0];
+let sUrl = img; 
 
 m.react('✅');
-await conn.sendFile(m.chat, img, 'sticker.webp', '', m, null);
-}
+await conn.sendFile(m.chat, sUrl, 'sticker.webp', '', m, null);
+ }
+};
 
 handler.command = ['test'];
 
