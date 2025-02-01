@@ -15,9 +15,9 @@ m.react('🕑');
 let api = `https://delirius-apiofc.vercel.app/tools/htmlextract?url=${args[0]}`;
 let resp = await fetch(api);
 let json = await resp.json();
-let data = json.result;
+let data = json.html;
 
-let html = `*HTML EXTRAIDO DE LA WEB:*`
+let html = `*HTML EXTRAIDO DE LA WEB: ${data}*`
 
 conn.sendMessage(m.chat, { caption: html }, { quoted: fkontak });
 };
