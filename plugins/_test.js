@@ -1,39 +1,35 @@
-/* Tiktok MP3 By WillZek 
-- Free Codes Titan 
-- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
+/* Tiktok Search By WillZek 
+- https://github.com/WillZek
 */
 
-// [💥] 𝗧𝗜𝗞𝗧𝗢𝗞 𝗠𝗣3 - 𝗗𝗟
+// Después pongo esto
 
 import fetch from 'node-fetch';
 
-let handler = async(m, { conn, args, usedPrefix, command }) => {
+let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!args[0]) return m.reply(`🎩 Ingrese Una Url De Tiktok\n*Ejemplo:* ${usedPrefix + command} https://vm.tiktok.com/ZMh3KL31o/`);
+if (!text) return m.reply(`🔎 Ingrese Un Texto Para Buscarlo En Tiktok\n> *Ejemplo:* ${usedPrefix + command} Crow Edits`);
 
 try {
-let api = `https://eliasar-yt-api.vercel.app/api/search/tiktok?query=${args[0]}`;
+let api = `https://delirius-apiofc.vercel.app/search/tiktoksearch?query=${text}`;
+
 let response = await fetch(api);
-let json = await response.json();
-let res = json.results;
+let json = response.json;
+let meta = json.meta; // o json.meta[0]
 
-m.react('🕑');
-let ttt = `*Autor:* ${res.author}\n*Título:* ${res.title}`;
+let txt = `*Titulo:* ${meta.title}\n*Descripción:* ${meta.description}`;
 
-let aud = res.audio;
-let img = 'https://files.catbox.moe/51xcx4.jpg';
+let img = 'despues.jpg';
+let vid = json.hd;
 
-await conn.sendFile(m.chat, img, 'thumbnail.jpg', ttt, m, null);
-
-conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mpeg' }, { quoted: m });
-m.react('✅');
+conn.sendMessage(m.chat, { video: { url: vid }, caption: txt }, { quoted: fkontak });
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
 m.react('✖️');
  }
-}
+};
 
-handler.command = ['tiktokmp3', 'ttmp3'];
+handler.command = ['test'];
 
 export default handler;
