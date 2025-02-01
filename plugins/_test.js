@@ -23,7 +23,7 @@ let stiker = await sticker(buffer, false, global.packname, global.author);
 let img = data.stickers;
 
 m.react('✅');
-/* conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
+/* conn.sendFile(m.chat, img, null, { asSticker: true }, m)
 */
 
 await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m, null);
