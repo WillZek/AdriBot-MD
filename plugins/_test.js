@@ -17,10 +17,9 @@ let response = await fetch(api);
 let json = response.json;
 let meta = json.meta; // o json.meta[0]
 
-let txt = `*Titulo:* ${meta.title}\n*Likes:* ${meta.like}\n*Comentarios:* ${meta.comment}\n*Compartidas:* ${meta.share}\n*Link:* ${meta.url}`;
+let txt = `*Nombre De Usuario:* ${meta.username}\n*Titulo:* ${meta.title}\n*Likes:* ${meta.like}\n*Comentarios:* ${meta.comment}\n*Compartidas:* ${meta.share}\n*Link:* ${meta.url}`;
 
-let img = 'despues.jpg';
-let vid = json.hd;
+let vid = meta.hd;
 
 conn.sendMessage(m.chat, { video: { url: vid }, caption: txt }, { quoted: fkontak });
 
