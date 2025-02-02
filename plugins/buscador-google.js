@@ -33,6 +33,7 @@ m.react(done);
 };
 handler.help = ['google', 'googlef'].map((v) => v + ' <pencarian>');
 handler.tags = ['buscador'];
+handler.customPrefix = /g|goo/i;
 handler.command = /^googlef?$/i;
 handler.estrellas = 7;
 export default handler;
