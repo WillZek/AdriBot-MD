@@ -1,4 +1,4 @@
-import axios from 'axios'
+/* import axios from 'axios'
 import Starlights from '@StarlightsTeam/Scraper'
 
 let handler = async (m, { conn, usedPrefix, command, text, args }) => {
@@ -35,3 +35,4 @@ handler.command = ['tiktoksearch', 'tiktoks']
 handler.register = true
 
 export default handler
+*/
