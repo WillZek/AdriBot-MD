@@ -32,20 +32,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       bot.antiPrivate = isEnable
       break
 
-case 'autoaceptar': case 'aceptarnuevos':
-if (!m.isGroup) {
-if (!isOwner) {
-global.dfail('group', m, conn)
-throw false
-}
-} else if (!isAdmin) {
-global.dfail('admin', m, conn)
-throw false
-}
-chat.autoAceptar = isEnable
-break
-
-
   case 'restrict':
     case 'restringir':
      isAll = true
@@ -79,6 +65,17 @@ break
       }
       chat.antiBot2 = isEnable
       break
+
+    case 'antitoxic': 
+    case 'antitoxicos':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn);
+          throw false;
+        }
+      }
+      isEnable = chat.antitoxic = !chat.antitoxic;
+      break;
 
  case 'antifake':
     case 'antifakes':
@@ -159,6 +156,16 @@ break
       }
       chat.audios = isEnable
       break
+
+    case 'antilink2':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn);
+          throw false;
+        }
+      }
+      isEnable = chat.antiLink2 = !chat.antiLink2;
+      break;
 
 case 'autolevelup': case 'autonivel': case 'nivelautomatico':
 if (m.isGroup) {
@@ -270,36 +277,31 @@ break
     break
     default:
       if (!/[01]/.test(command)) return conn.reply(m.chat, `
-*[🌠] Funciones Solo Para Owner*
+*[🍨] Funciones Solo Para Owner*
 
-${usedPrefix + command} antispam
-${usedPrefix + command} antiprivado
-${usedPrefix + command} subbots
-${usedPrefix + command} status
-${usedPrefix + command} restrict
-${usedPrefix + command} autoread
+🜲 ${usedPrefix + command} antispam
+🜲 ${usedPrefix + command} antiprivado
+🜲 ${usedPrefix + command} subbots
+🜲 ${usedPrefix + command} status
+🜲 ${usedPrefix + command} restrict
 
-*[🌠] Funciones De Grupos*
+*[🎩] Funciones De Grupos*
 
-${usedPrefix + command} welcome 
-${usedPrefix + command} autolevelup
-${usedPrefix + command} antibot
-${usedPrefix + command} reaccion
-${usedPrefix + command} simi
-${usedPrefix + command} audios
-${usedPrefix + command} autoread
-${usedPrefix + command} antiver
-${usedPrefix + command} detect 
-${usedPrefix + command} delete
-${usedPrefix + command} antitraba
-${usedPrefix + command} modoadmin 
-${usedPrefix + command} antiarabes
-${usedPrefix + command} autoaceptar
-${usedPrefix + command} antilink`, m, rcanal)
+➳ ${usedPrefix + command} welcome 
+➳ ${usedPrefix + command} autolevelup
+➳ ${usedPrefix + command} antibot
+➳ ${usedPrefix + command} antiver
+➳ ${usedPrefix + command} detect 
+➳ ${usedPrefix + command} delete
+➳ ${usedPrefix + command} modoadmin 
+➳ ${usedPrefix + command} antiarabes
+➳ ${usedPrefix + command} autoaceptar
+➳ ${usedPrefix + command} antilink
+➳ ${usedPrefix + command} antilink2`, m, rcanal)
 
       throw false
   }
-  conn.reply(m.chat, `[🌠] La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este Bot' : isUser ? '' : 'para este chat'}`, m, rcanal)
+  conn.reply(m.chat, `[🍨] La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este Bot' : isUser ? '' : 'para este chat'}`, m, rcanal)
 }
 
 handler.help = ['enable', 'disable']
