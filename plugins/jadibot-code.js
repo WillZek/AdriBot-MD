@@ -21,11 +21,17 @@ import { makeWASocket } from '../lib/simple.js';
 if (!(global.conns instanceof Array)) global.conns = [];
 
 let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => {
+
+const bot = global.db.data.settings[conn.user.jid] || {};
+
+if (!bot.jadibotmd) return m.reply('💛 Este Comando Se Encuentra Desactivado Por Mi Creador');
+
   let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn;
 
-  if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
+/*  if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
     return m.reply(`Este comando solo puede ser usado en el bot principal! wa.me/${global.conn.user.jid.split`@`[0]}?text=${usedPrefix}code`);
   }
+*/
 
   async function serbot() {
     let authFolderB = m.sender.split('@')[0];
@@ -71,7 +77,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
       defaultQueryTimeoutMs: undefined,
       version
     };
-       
+
     let conn = makeWASocket(connectionOptions);
 
     if (methodCode && !conn.authState.creds.registered) {
@@ -176,7 +182,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
 
 handler.help = ['code'];
 handler.tags = ['serbot'];
-handler.command = ['code', 'code'];
+handler.command = ['code', 'Code', 'serbot'];
 handler.rowner = false
 
 export default handler;
